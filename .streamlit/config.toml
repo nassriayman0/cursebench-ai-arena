@@ -1,0 +1,11 @@
+# JJK AI Arena — Streamlit theme (cursed-energy dark)
+[theme]
+base = "dark"
+primaryColor = "#a855f7"
+backgroundColor = "#0a0a14"
+secondaryBackgroundColor = "#15152a"
+textColor = "#e8e6f0"
+font = "sans serif"
+
+[server]
+runOnSave = true

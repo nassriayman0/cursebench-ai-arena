@@ -1,0 +1,15 @@
+# JJK AI Arena — dependencies
+# Python 3.11 recommended.
+
+# --- Core (required; runs fully locally on Ollama) ---
+streamlit>=1.30
+pydantic>=2.5
+openai>=1.30          # also drives Ollama (OpenAI-compatible endpoint) and xAI Grok
+tenacity>=8.2         # retry/backoff on model calls
+python-dotenv>=1.0    # load .env
+pytest>=8.0           # unit tests (generator invariant + combat determinism)
+
+# --- Frontier providers ---
+anthropic>=0.40            # Claude seats — functional (you have a key)
+# google-generativeai>=0.8 # Gemini seats — OPTIONAL; uncomment if you add GOOGLE_API_KEY
+# OpenAI + xAI need no extra package: they reuse the `openai` SDK above.

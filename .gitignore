@@ -1,0 +1,20 @@
+# JJK AI Arena
+.env
+saves/
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+.DS_Store
+md_files.zip
+
+# Design / context docs — keep local, don't push (README.md is the public doc)
+[0-9][0-9]_*.md
+DECISIONS.md
+PROJECT_RESUME.md
+jjk techniques.md
+!README.md
