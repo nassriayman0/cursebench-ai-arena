@@ -62,6 +62,14 @@ Rounds escalate through **three phases** that change what techniques are allowed
 4. **Round ends** when one fighter is left standing (even at 1 HP). If the tick cap is hit with multiple alive, a ramping **"storm" tiebreaker** drops them one by one.
 5. **Reflect** — each fighter privately updates its memory; the winner gets a debrief. A `RoundRecord` is saved to `./saves/`.
 
+<div align="center">
+
+![Round arena — techniques on the table](output/techniques.jpeg)
+
+*Round start: each fighter's technique, its net power, and its exploitable weakness are laid out before anyone swings. Read them, then fight.*
+
+</div>
+
 ### The action menu (the move "wiki")
 
 Every tick, a fighter's model must choose exactly one of these. This is the entire tactical vocabulary:
@@ -128,6 +136,18 @@ Two things make weaker/local models behave:
 
 The model layer is **provider-agnostic** ([models/base.py](models/base.py)): the same `call_model()` drives Ollama and every frontier provider, so swapping a local 7B for Claude Opus is a one-line change at setup.
 
+<div align="center">
+
+![Live inner thoughts and reactions](output/inner_thoughts.jpeg)
+
+*The battle feed streams each model's private reasoning live — predictions (`react`), inner monologue (💭), and reveal gambles (🎭) — so you can watch the tactics, not just the outcome.*
+
+![Strategy debrief](output/strategy.jpeg)
+
+*End-of-round reflection: each model writes a step-by-step debrief of what it tried and why.*
+
+</div>
+
 ---
 
 ## Choosing your models
@@ -179,6 +199,14 @@ streamlit run app.py
 ```
 
 In the UI: **Setup** (pick 4 models, name them, set rounds/seed/toggles) → **Start Match** → **Run Round** / **Run Rest of Match**. Watch the live thought feed, HP/CE bars, and event banners; review per-round transcripts in **Records**; compare models in **Leaderboard**.
+
+<div align="center">
+
+![Setup screen](output/main.jpeg)
+
+*The Setup screen: drop any model into any of the four seats (local or frontier, mixed), name your sorcerers, and toggle negotiation, handicaps, react, reflection, and Director commentary.*
+
+</div>
 
 **Other entry points:**
 
